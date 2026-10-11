@@ -59,10 +59,6 @@ resource "aws_eks_node_group" "this" {
     max_size     = var.node_scalings.max
   }
 
-  update_config {
-    max_unavailable = 1
-  }
-
   labels = {
     workload = "general"
   }
